@@ -18,7 +18,10 @@
         <a class="navbar-brand" href="#">Flixter</a>
         
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <li class="nav-item">
+              <%=link_to 'See All Courses', courses_path, class: 'nav-link' %>
+            </li>
           </ul>
           <ul class="navbar-nav">
             <% if user_signed_in? %>
