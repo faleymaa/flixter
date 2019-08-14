@@ -7,7 +7,7 @@ class LessonsController < ApplicationController
 
 	def require_enrolled_in_current_course
 		if current_user.enrolled_in?(current_lesson.section.course) != true
-			redirect_to course_url, alert: 'You must be enrolled in this course.'
+			redirect_to course_path(current_lesson.section.course), alert: 'You must be enrolled in this course.'
 		end
 	end
 
